@@ -142,7 +142,7 @@ def train_model(model, train_loader, val_loader, num_epochs=100, learning_rate=0
     print("Training completato!")
 
 
-def test_model(model, test_samples=5):
+def evaluate_model(model, test_samples=5):
     """
     Testa il modello con alcuni campioni casuali.
 
@@ -214,7 +214,7 @@ def main():
                 num_epochs=NUM_EPOCHS, learning_rate=LEARNING_RATE)
 
     # Testa il modello
-    test_model(model, test_samples=5)
+    evaluate_model(model, test_samples=5)
 
     # Salva il modello
     torch.save(model.state_dict(), 'model.pth')
